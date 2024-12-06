@@ -1,108 +1,155 @@
-/* Global Styles */
+/* Reset margin, padding, and set box-sizing globally */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  /* Body and font styles */
+  body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Login Container */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-}
-
-.login-form {
+    background-color: #f4f4f4;
+  }
+  
+  /* Styling the Navbar */
+  .navbar {
     background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Input Styles */
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.input-group label {
-    font-size: 14px;
-    color: #666;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #007BFF;
-}
-
-/* Remember Me Checkbox */
-.remember-me {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.remember-me input {
-    margin-right: 10px;
-}
-
-/* Button Styles */
-.btn-login {
-    width: 100%;
-    padding: 12px;
-    background-color: #007BFF;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-login:hover {
-    background-color: #0056b3;
-}
-
-/* Links */
-.forgot-password a,
-.signup-link a {
-    color: #007BFF;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo a {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
     text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 10px;
-}
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links li a {
+    color: rgb(225, 74, 14);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    font-style: initial;
+  }
+  
 
-.forgot-password a:hover,
-.signup-link a:hover {
-    text-decoration: underline;
-}
+  
+  /* Add a responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    .nav-links.active {
+      display: block;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
+  .one{
+    width: 1255px;
+    height: 500px;
+  }
+  /* Reset default margin, padding, and box-sizing globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #fff4f4;
+    color: rgb(0, 0, 0);
+    padding: 40px 20px;
+    margin-top: 50px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo a {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .footer-links li {
+    margin: 0 15px;
+  }
+  
+  .footer-links li a {
+    color: rgb(236, 10, 10);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Footer bottom section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 758px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-links {
+      margin-top: 10px;
+      flex-direction: column;
+    }
+  
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+  }
+  .two{
+    width: 80px;
+  }

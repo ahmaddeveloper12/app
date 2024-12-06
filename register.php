@@ -1,31 +1,32 @@
 <html>
 <head>
-    <title>Registration</title>
-     <link rel="stylesheet" href="./form.css">
+    <title>How to Write a Program</title>
 </head>
 <body>
+           <h1 class="three">welcome to our cheesy family</h1>
+           <link rel="stylesheet" href="./tank.css">
 
-<div class="zero">
     <center>
     <?php
-       // Collect form data from POST request
+      
        $user = $_POST["user"];
-       $course = $_POST["course"];
        $phone = $_POST["phone"];
-       $email = $_POST["email"];
+       $city = $_POST["city"];
+       $email= $_POST["email"];
       
        // Establish a connection to the MySQL database
-       $conn = mysqli_connect("localhost", "root", "", "stat");
+       $conn = mysqli_connect("localhost", "root", "", "burger");
 
        // Check if the connection was successful
        if ($conn->connect_error) {
            die('Connection failed: ' . $conn->connect_error);
-       } else {
-           // Prepare the SQL statement with placeholders
-           $stmt = $conn->prepare("INSERT INTO dog (user, phone, email, course) VALUES (?, ?, ?, ?)");
+   } 
+    else {
+     
+           $stmt = $conn->prepare("INSERT INTO ger ( user, phone, city ,email) VALUES (?, ?, ?, ?)");
 
-           // Bind the parameters to the prepared statement
-           $stmt->bind_param("ssss", $user, $phone, $email, $course);
+          
+           $stmt->bind_param("ssss", $user, $phone, $city, $email);
 
            // Execute the statement
            if ($stmt->execute()) {
@@ -37,9 +38,8 @@
            // Close the statement and connection
            $stmt->close();
            $conn->close();
-       }
+      }
     ?>
-    </div>
     </center>
 </body>
 </html>
